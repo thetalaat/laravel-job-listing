@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 /* testing code for reference
 Route::get('/posts', function() {
     return response()->json([
@@ -29,3 +25,7 @@ Route::get('/posts', function() {
     ]);
 });
 */
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
